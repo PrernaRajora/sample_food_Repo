@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | ZOMATO</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .testimonials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  background-color: #c61b30;
+}
+
+.testimonial-box {
+  background-color: #c61b30;
+  width: 300px;
+  height: 500px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  color: white
+}
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    #frame {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    nav {
+      width: 100%;
+      padding: 15px 30px;
+      background-color: #c61b30;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      z-index: 10;
+    }
+
+    .topright a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: #c61b30;
+    }
+    .topright {
+      margin-right: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: #c61b30;
+    }
+
+    #slides {
+      width: 400%;
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .inner {
+      display: flex;
+      width: 400%;
+    }
+
+    .frame {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame-content {
+      text-align: center;
+      padding-top: 60px; 
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+    .explore {
+      color: white;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: nowrap; 
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.explore div {
+  color: white;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.explore img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+    #frame1:checked ~ #slides { transform: translateX(0); }
+    #frame2:checked ~ #slides { transform: translateX(-100vw); }
+    #frame3:checked ~ #slides { transform: translateX(-200vw); }
+    #frame4:checked ~ #slides { transform: translateX(-300vw); }
+
+    .nav-labels {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 5;
+    }
+
+    .nav-labels label {
+      width: 12px;
+      height: 12px;
+      background: gray;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .food-items {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .food-items div {
+      text-align: center;
+    }
+
+    .food-items img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #c61b30;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div id="frame">
+      <nav>
+        <div class="topright">
+          <a href="home.html">Home</a>
+          <a href="login.html">Login</a>
+          <a href="registration.html">Register</a>
+        </div>
+      </nav>
+
+      <input type="radio" name="frame" id="frame1" checked>
+      <input type="radio" name="frame" id="frame2">
+      <input type="radio" name="frame" id="frame3">
+      <input type="radio" name="frame" id="frame4">
+
+      <div id="slides">
+        <div class="inner">
+          <div class="frame frame_1">
+            <div class="frame-content">
+              <h1>ZOMATO</h1>
+            </div>
+          </div>
+          <div class="frame frame_2">
+            <div class="frame-content">
+              <h2>India’s #1 food delivery app</h2>
+              <p>Experience fast & easy online ordering on the Zomato app</p>
+            </div>
+          </div>
+          <div class="frame frame_3">
+            <div class="frame-content">
+              <h3>Featured Dishes</h3>
+              <div class="food-items">
+                <div>
+                  <img src="https://b.zmtcdn.com/data/dish_photos/68d/f7ef8df0fed856ee03c983f156fbb68d.jpg" alt="PIZZA">
+                  <div class="item">PIZZA</div>
+                </div>
+                <div>
+                  <img src="https://rhubarbandcod.com/wp-content/uploads/2021/02/Hazelnut-Brownies-with-Frangelico-Ice-Cream.jpg" alt="HAZELNUT BROWNIES">
+                  <div class="item">HAZELNUT BROWNIES</div>
+                </div>
+                <div>
+                  <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/01/white-sauce-pasta.jpg" alt="WHITE SAUCE PASTA">
+                  <div class="item">WHITE SAUCE PASTA</div>
+                </div>
+                <div>
+                  <img src="https://abeautifulmess.com/wp-content/uploads/2023/05/frappuccino.jpg" alt="FRAPPUCCINO">
+                  <div class="item">FRAPPUCCINO</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame frame_4">
+            <div class="frame-content">
+              <h2>Thanks for visiting Zomato!</h2>
+              <p>Explore more in our app!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-labels">
+        <label for="frame1"></label>
+        <label for="frame2"></label>
+        <label for="frame3"></label>
+        <label for="frame4"></label>
+      </div>
+    </div>
+  </header>
+  <section>
+  <h1 style="text-align:center;color:white">Explore</h1>
+  <div class="explore">
+    <div>
+      <img src="https://images.aws.nestle.recipes/resized/0a0717810b73a1672a029c29788e557b_creamy_alfredo_pasta_long_left_1200_628.jpg" alt="Creamy Alfredo Pasta">
+      <div class="item">Creamy Alfredo Pasta</div>
+    </div>
+    <div>
+      <img src="https://www.spendwithpennies.com/wp-content/uploads/2022/12/1200-Easy-Homemade-Lasagna-SpendWithPennies.jpg" alt="Lasagna">
+      <div class="item">Lasagna</div>
+    </div>
+    <div>
+      <img src="https://assets.telegraphindia.com/telegraph/2021/Nov/1637071075_house-of-dimsum.jpg" alt="Dimsums">
+      <div class="item">Cream Cheese & Truffle Oil Dimsums</div>
+    </div>
+    <div>
+      <img src="https://cdn.uengage.io/uploads/7175/image-8LDDGZ-1706080808.jpg" alt="Chocolate Pastry">
+      <div class="item">Rich Chocolate Pastry</div>
+    </div>
+    <div>
+      <img src="https://bakersway.in/cdn/shop/files/classic-fries.png?v=1715066856&width=1445" alt="Fries">
+      <div class="item">Classic Salted Fries</div>
+    </div>
+    <div>
+      <img src="https://static.toiimg.com/thumb/msid-109712111,width-400,resizemode-4/109712111.jpg" alt="Bubble Tea">
+      <div class="item">Bubble Tea</div>
+    </div>
+  </div>
+</section>
+<video width="1500" height="500" autoplay muted>
+  <source src="C:\Users\Lenovo\Videos\Screen Recordings\Screen Recording 2025-07-27 114350.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <section>
+  <h1 style="text-align:center;color:white">Testimonials</h1>
+  <div class="testimonials">
+    <div class="testimonial-box">
+      ⭐️⭐️⭐️⭐️⭐️  
+      <strong>Ritika S., Mumbai</strong>  
+      <p>"This app has completely changed how I order food. It’s fast, intuitive, and the delivery is always on time. The UI is smooth, and tracking my order is super easy!"</p>
+    </div>
+    <div class="testimonial-box">
+      ⭐️⭐️⭐️⭐️⭐️  
+      <strong>Aniket V., Bengaluru</strong>  
+      <p>"Love the variety of restaurants listed — even some hidden gems I didn’t know about! The reviews and photos help me decide exactly what I want to eat."</p>
+    </div>
+    <div class="testimonial-box">
+      ⭐️⭐️⭐️⭐️⭐️  
+      <strong>Neha T., Delhi</strong>  
+      <p>"I use this app every weekend. The discounts, seamless payment options, and the live order tracker make it my go-to food app. Absolutely recommend!"</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer>
+    <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners 2008–2025 © Zomato™ Ltd. All rights reserved.</p>
+  </footer>
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 4;
+
+    setInterval(() => {
+      currentSlide++;
+      if (currentSlide > totalSlides) {
+        currentSlide = 1;
+      }
+      document.getElementById(`frame${currentSlide}`).checked = true;
+    }, 2000); 
+  </script>
+
+</body>
+</html>
+
+
